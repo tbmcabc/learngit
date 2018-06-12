@@ -1,2 +1,2 @@
-just let my macbook can get this txt feil
-just let my macbook can get this txt feil new
+Git is a distributed version control system.
+Git is free software distributed under the GPL.
