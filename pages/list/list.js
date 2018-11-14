@@ -1,11 +1,12 @@
 // pages/list.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    nowTarget: 0
+    nowTarget: 0,
+    appkey:"624b6abd7519e4f6d875c36980cc249e",
+    expcomarr:[]
   },
 
   /**
@@ -65,10 +66,36 @@ Page({
   },
 
   ChangePage: function(e) {
-    console.log(e)
-    console.log(e.detail.current)
     this.setData({
       nowTarget : e.detail.current
     })
+  },
+
+  touchinfo:function(e){
+    // wx.request({
+    //   url: 'http://v.juhe.cn/exp/com',
+    //   data:{
+    //     key: "624b6abd7519e4f6d875c36980cc249e"
+    //   },
+    //   success: function(res) {
+    //     console.log(res.data.result)
+    //   },
+    //   fail: function(res) {
+    //     console.log("fail",res)
+    //   },
+    //   complete: function(res) {
+    //   },
+    // })
+    let arr = [{ com: "顺丰", no: "sf"},
+    { com: "申通", no: "sto" },
+    { com: "圆通", no: "yt" },
+    { com: "韵达", no: "yd" },
+    { com: "天天", no: "tt" },
+    { com: "EMS", no: "ems" },
+    { com: "中通", no: "zto" }
+    ]
+    this.setData({
+      expcomarr: arr
+    })    
   }
 })
